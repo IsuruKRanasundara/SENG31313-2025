@@ -1,0 +1,26 @@
+{
+  "name": "se-2021-001",
+  "version": "1.0.0",
+  "description": "Develop a **personal portfolio web page** using **HTML, CSS, and JavaScript**. This project will assess your ability to design a creative, functional, and aesthetically pleasing website while ensuring proper use of version control through GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsuruKRanasundara/SENG31313-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IsuruKRanasundara/SENG31313-2025/issues"
+  },
+  "homepage": "https://github.com/IsuruKRanasundara/SENG31313-2025#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.3",
+    "animate.css": "^4.1.1",
+    "tailwindcss": "^4.1.3"
+  }
+}

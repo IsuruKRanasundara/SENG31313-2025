@@ -1,119 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+      --animate-duration: 1s; /* Define animation duration variable */
+    }
+    .animate__animated {
+      -webkit-animation-duration: var(--animate-duration);
+      animation-duration: var(--animate-duration);
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="navigationBar">
+<body class="bg-blue-50 text-gray-900 font-sans">
 
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="flex flex-wrap justify-center items-center space-x-4 p-4">
+      <button class="px-4 py-2 border-b-2 border-transparent hover:border-blue-700 transition-all duration-300">
+        <a href="#about">
+          <p class="text-blue-700 font-bold font-mono text-lg md:text-2xl">About</p>
+        </a>
+      </button>
+      <button class="px-4 py-2 border-b-2 border-transparent hover:border-blue-700 transition-all duration-300">
+        <a href="#home">
+          <p class="text-blue-700 font-bold font-mono text-lg md:text-2xl">Home</p>
+        </a>
+      </button>
+      <button class="px-4 py-2 border-b-2 border-transparent hover:border-blue-700 transition-all duration-300">
+        <a href="#projects">
+          <p class="text-blue-700 font-bold font-mono text-lg md:text-2xl">Projects</p>
+        </a>
+      </button>
+      <button class="px-4 py-2 border-b-2 border-transparent hover:border-blue-700 transition-all duration-300">
+        <a href="#contact">
+          <p class="text-blue-700 font-bold font-mono text-lg md:text-2xl">Contact</p>
+        </a>
+      </button>
+    </nav>
+  </header>
+
+  <section id="home" class="px-4 py-12 md:px-20">
+    <div class="space-y-9">
+      <div>
+        <h1 class="text-3xl md:text-5xl pb-7 font-extrabold text-blue-700 text-center animate__animated animate__fadeInDown">
+          Welcome to My Portfolio
+        </h1>
+        <p class="text-gray-700 leading-relaxed mt-4 text-2xl font-think animate__animated animate__fadeInUp">
+          With a passion for innovation and a strong foundation in software development, I thrive on solving complex problems 
+          and building efficient, user-centric solutions. My expertise spans web and mobile development,And passionate about cloud technologies,
+          with a keen interest in DevOps, cybersecurity, and artificial intelligence. This portfolio showcases my journey, 
+          highlighting the projects I've worked on, the skills I've acquired, and the values I bring to every endeavor. Whether you're 
+          a potential collaborator, employer, or simply curious about my work, I invite you to explore and connect with me. Together, 
+          we can create impactful solutions that drive progress and innovation.
+        </p>
+        <div class="text-center mt-6">
+          <button class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800 transition-all">
+            Connect
+          </button>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-7">
+        <div class="w-full md:w-1/2 animate__animated animate__backInLeft">
+          <img id="image" src="./Assets/images (1).jpeg" alt="Profile Picture" class="w-full max-w-xs rounded-full shadow-lg mx-auto border-4 border-blue-700" />
+        </div>
+        <div class="w-full md:w-1/2 text-center md:text-left space-y-2 animate__animated animate__fadeInRight">
+          <h1 class="text-blue-900 font-extrabold font-mono text-9xl">I'm Name</h1>
+          <h2 class="text-5xl text-blue-700 font-bold">Software Engineer</h2>
+          <h3 class="text-gray-600 pt-1 text-2xl font-semibold">
+            <span id="dynamic-text" class="animate__animated"></span>
+          </h3>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <div class="yAxisDivider">
-                <div class="yAxisDivider1">
-                    <h1>Welcome to My Portfolio</h1>
-                   
-                        <p class="introduction">
-                            
-                            With a passion for innovation and a strong foundation in 
-                            software development, I thrive on solving complex problems 
-                            and building efficient, user-centric solutions. My expertise 
-                            spans web and mobile development, cloud technologies, and embedded
-                            systems, with a keen interest in DevOps, cybersecurity, and 
-                            artificial intelligence. Whether it's crafting seamless front-end
-                            experiences, optimizing backend performance, or exploring 
-                            new advancements in technology, I am always eager to learn, 
-                            adapt, and contribute to meaningful projects.
+  <section id="about" class="p-4 md:p-12 bg-white">
+    <h2 class="text-4xl font-bold text-center text-blue-700 mb-4">About Me</h2>
+    <p class="max-w-4xl mx-auto text-center text-gray-700">
+      Hi, I'm a software engineer with a deep passion for creating innovative solutions that make life easier and more efficient. 
+      Over the years, I have honed my skills in web development, mobile applications, and embedded systems, working on projects 
+      that range from small-scale prototypes to large-scale enterprise applications. I thrive on solving complex problems, 
+      collaborating with diverse teams, and continuously learning new technologies to stay ahead in this ever-evolving field. 
+      When I'm not coding, I enjoy exploring new places, reading about emerging tech trends, and mentoring aspiring developers.
+    </p>
+  </section>
 
-                        </p>
-                    
-                    </div>
-        <div class="introductionContainer">
+  <section id="projects" class="p-4 md:p-12 bg-blue-100">
+    <h2 class="text-4xl font-bold text-center text-blue-700 mb-8">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-bold mb-2">Project 1</h3>
+        <p class="text-gray-600">
+          This project is a web-based task management application designed to help users organize their daily activities efficiently. 
+          It features a user-friendly interface, real-time collaboration, and seamless integration with popular calendar tools. 
+          Built using React and Node.js, the application ensures high performance and scalability.
+        </p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-bold mb-2">Project 2</h3>
+        <p class="text-gray-600">
+          A mobile application that leverages machine learning to provide personalized fitness recommendations. 
+          The app tracks user activity, analyzes patterns, and suggests tailored workout plans and nutrition tips. 
+          Developed using Flutter and TensorFlow Lite, it offers a seamless experience across Android and iOS platforms.
+        </p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-bold mb-2">Project 3</h3>
+        <p class="text-gray-600">
+          An IoT-based home automation system that allows users to control and monitor their home appliances remotely. 
+          The system includes features like energy usage tracking, voice commands, and automated schedules. 
+          Built with Raspberry Pi, Python, and MQTT, it ensures reliability and security for smart home enthusiasts.
+        </p>
+      </div>
+    </div>
+  </section>
 
-                <div class="yAxisDivider2">
-                    <div class="xAxisDivider">
-                        <div class="xAxisDivider1">
-                            
-                            <img id="profilePicture" src="Assets/images (1).jpeg " alt="Profile Picture" class="about-image">
+  <section id="contact" class="p-4 md:p-12 bg-white">
+    <h2 class="text-4xl font-bold text-center text-blue-700 mb-6">Contact</h2>
+    <form id="contact-form" class="max-w-xl mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700">
+      <input type="email" placeholder="Your Email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700">
+      <textarea placeholder="Your Message" required class="w-full px-4 py-2 border rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-700"></textarea>
+      <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800 transition-all">Send Message</button>
+    </form>
+  </section>
 
-                        </div>
+  <footer class="text-center py-4 bg-gray-200 mt-8">
+    <p>&copy; 2025 Your Name</p>
+  </footer>
 
-                        <div class="xAxisDivider2">
-                            <h1 class="info">I'm Name </h1>
-                            <h2 class="info">Software Engineer</h2> 
-                            <h3 class="info">
-                                Software Development |
-                                Cyber Security |
-                                Cloud Computing |
-                                Devops Engineering
-
-                            </h3>
-                        </div>
-                    </div>
-                    
-                    
-                      
-                </div>
-            </div>
-        </div>
-        <!-- 
-            <p>I'm a passionate software engineer</p>
-            <a href="#contact" class="btn">Get in Touch</a>
-        </div>
-    -->
-    </section>
-
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Hi, I'm a software engineer with experience in web development, mobile apps, and embedded systems. I love building things that make life easier.</p>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Description of the project goes here.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Description of the project goes here.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project 3</h3>
-                <p>Description of the project goes here.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Your Name</p>
-    </footer>
-
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
