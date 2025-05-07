@@ -1,16 +1,12 @@
 import 'animate.css';
-
 document.addEventListener("DOMContentLoaded", () => {
-    // Put Animation to Image
-    const image = document.getElementById('image');
-    if (image) {
-        image.classList.add('animate__animated', 'animate__fadeInDown');
-        image.addEventListener('animationend', () => {
-            image.classList.remove('animate__animated', 'animate__fadeInDown');
-        });
+    if (typeof newFunction === "function") {
+      newFunction();
+    } else {
+      console.warn("newFunction is not defined.");
     }
-
-    // Dynamic text animation
+  });
+const newFunction = () => {
     const phrases = [
         "Software Development",
         "Cyber Security",
@@ -20,24 +16,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const dynamicText = document.getElementById("dynamic-text");
     let index = 0;
 
-    if (dynamicText) {
+    const startAnimation = () => {
         setInterval(() => {
-            console.log(`Updating text to: ${phrases[index]}`); // Debugging log
-            dynamicText.textContent = phrases[index];
-            dynamicText.classList.remove("animate__fadeIn");
-            void dynamicText.offsetWidth; // Trigger reflow to restart animation
-            dynamicText.classList.add("animate__animated", "animate__fadeIn");
-            index = (index + 1) % phrases.length;
+            if (dynamicText) {
+                dynamicText.textContent = phrases[index];
+                dynamicText.classList.remove("animate__fadeIn");
+                void dynamicText.offsetWidth; // Trigger reflow to restart animation
+                dynamicText.classList.add("animate__animated", "animate__fadeIn");
+                index = (index + 1) % phrases.length;
+            }
         }, 2000); // Change text every 2 seconds
-    } else {
-        console.error("Element with id 'dynamic-text' not found."); // Debugging log
-    }
-});
+    };
 
-const contactForm = document.getElementById("contact-form");
-if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        alert("Thank you for reaching out! Your message has been sent.");
-    });
-}
+    if (dynamicText) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startAnimation();
+                    observer.disconnect(); // Stop observing once animation starts
+                }
+            });
+        });
+        observer.observe(dynamicText);
+    } else {
+        console.error("Element with id 'dynamic-text' not found.");
+    }
+
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Thank you for reaching out! Your message has been sent.");
+        });
+    }
+};

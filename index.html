@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./index.js" type="module"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
     html {
@@ -49,42 +50,40 @@
   <section id="home" class="px-4 py-12 md:px-20">
     <div class="space-y-9">
       <div>
-        <h1 class="text-3xl md:text-5xl pb-7 font-extrabold text-blue-700 text-center animate__animated animate__fadeInDown">
-          Welcome to My Portfolio
-        </h1>
-        <p class="text-gray-700 leading-relaxed mt-4 text-2xl font-think animate__animated animate__fadeInUp">
-          With a passion for innovation and a strong foundation in software development, I thrive on solving complex problems 
-          and building efficient, user-centric solutions. My expertise spans web and mobile development,And passionate about cloud technologies,
-          with a keen interest in DevOps, cybersecurity, and artificial intelligence. This portfolio showcases my journey, 
-          highlighting the projects I've worked on, the skills I've acquired, and the values I bring to every endeavor. Whether you're 
-          a potential collaborator, employer, or simply curious about my work, I invite you to explore and connect with me. Together, 
-          we can create impactful solutions that drive progress and innovation.
-        </p>
-        <div class="text-center mt-6">
-          <button class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800 transition-all">
-            Connect
-          </button>
-        </div>
+      <h1 class="text-4xl md:text-6xl pb-7 font-extrabold text-blue-700 text-center animate__animated animate__fadeInDown">
+        <span class="animate__animated animate__fadeInDown animate__delay-0s" style="--animate-duration: 2s;">Welcome to My Portfolio</span>
+      </h1>
+      <p class="text-gray-700 leading-relaxed mt-4 text-justify  text-lg md:text-xl font-semibold">
+        With a passion for innovation and a strong foundation in software development, I thrive on solving complex problems 
+        and building efficient, user-centric solutions. My expertise spans web and mobile development, and I am passionate about cloud technologies,
+        with a keen interest in DevOps, cybersecurity, and artificial intelligence. This portfolio showcases my journey, 
+        highlighting the projects I've worked on, the skills I've acquired, and the values I bring to every endeavor. Whether you're 
+        a potential collaborator, employer, or simply curious about my work, I invite you to explore and connect with me. Together, 
+        we can create impactful solutions that drive progress and innovation.
+      </p>
+      <div class="text-center mt-6">
+        
+      </div>
       </div>
 
       <div class="flex flex-col md:flex-row items-center justify-between gap-7">
-        <div class="w-full md:w-1/2 animate__animated animate__backInLeft">
-          <img id="image" src="./Assets/images (1).jpeg" alt="Profile Picture" class="w-full max-w-xs rounded-full shadow-lg mx-auto border-4 border-blue-700" />
-        </div>
-        <div class="w-full md:w-1/2 text-center md:text-left space-y-2 animate__animated animate__fadeInRight">
-          <h1 class="text-blue-900 font-extrabold font-mono text-9xl">I'm Name</h1>
-          <h2 class="text-5xl text-blue-700 font-bold">Software Engineer</h2>
-          <h3 class="text-gray-600 pt-1 text-2xl font-semibold">
-            <span id="dynamic-text" class="animate__animated"></span>
-          </h3>
-        </div>
+      <div class="w-full md:w-1/2 animate__animated animate__backInLeft animate__delay-1s">
+        <img id="image" src="./Assets/WhatsApp Image 2025-01-20 at 10.45.46_516b8b46.jpg" alt="Profile Picture" class="w-full max-w-xs rounded-full shadow-lg mx-auto border-4 border-blue-700" />
+      </div>
+      <div class="w-full md:w-1/2 text-center md:text-left space-y-4">
+        <h1 class="text-blue-900 font-extrabold font-mono text-6xl md:text-8xl animate__animated animate__fadeInDown animate__delay-1s">I'm Name</h1>
+        <h2 class="text-3xl md:text-5xl text-blue-700 font-bold animate__animated animate__zoomIn animate__delay-2s">Software Engineer</h2>
+        <h3 class="text-gray-600 pt-1 text-xl md:text-2xl font-semibold">
+          <span id="dynamic-text" onload="newFunction()" class="animate__animated animate__fadeIn animate__delay-2s"></span>
+        </h3>
+      </div>
       </div>
     </div>
   </section>
 
   <section id="about" class="p-4 md:p-12 bg-white">
-    <h2 class="text-4xl font-bold text-center text-blue-700 mb-4">About Me</h2>
-    <p class="max-w-4xl mx-auto text-center text-gray-700">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-4">About Me</h2>
+    <p class="max-w-4xl mx-auto text-center text-gray-700 text-lg md:text-xl">
       Hi, I'm a software engineer with a deep passion for creating innovative solutions that make life easier and more efficient. 
       Over the years, I have honed my skills in web development, mobile applications, and embedded systems, working on projects 
       that range from small-scale prototypes to large-scale enterprise applications. I thrive on solving complex problems, 
@@ -94,33 +93,45 @@
   </section>
 
   <section id="projects" class="p-4 md:p-12 bg-blue-100">
-    <h2 class="text-4xl font-bold text-center text-blue-700 mb-8">Projects</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-8">Projects</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
-        <h3 class="text-xl font-bold mb-2">Project 1</h3>
-        <p class="text-gray-600">
-          This project is a web-based task management application designed to help users organize their daily activities efficiently. 
-          It features a user-friendly interface, real-time collaboration, and seamless integration with popular calendar tools. 
-          Built using React and Node.js, the application ensures high performance and scalability.
+        <img src="./Assets//Screenshot (320).png" alt="Project 1" class="w-full h-40 object-cover rounded-md mb-4">
+        <h3 class="text-lg md:text-xl font-bold mb-2">Advertisement.lk</h3>
+        <p class="text-gray-600 text-sm md:text-base">
+          This project is a web based platform that connects buyers and sellers in Sri Lanka.
+          It allows users to post advertisements for various products and services, making it easier for them to find what they need.
+          The platform is built using the MERN stack, ensuring a responsive and user-friendly experience.
+          The project includes features such as user authentication,robust search functionality, and a secure payment gateway.
         </p>
       </div>
       <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
-        <h3 class="text-xl font-bold mb-2">Project 2</h3>
-        <p class="text-gray-600">
-          A mobile application that leverages machine learning to provide personalized fitness recommendations. 
-          The app tracks user activity, analyzes patterns, and suggests tailored workout plans and nutrition tips. 
-          Developed using Flutter and TensorFlow Lite, it offers a seamless experience across Android and iOS platforms.
+        <img src="./Assets/project2.jpg" alt="Project 2" class="w-full h-40 object-cover rounded-md mb-4">
+        <h3 class="text-lg md:text-xl font-bold mb-2">FuelWise.LK</h3>
+        <p class="text-gray-600 text-sm md:text-base">
+          This project is a web based platform that helps users to manage the fuel consumption in a country. And it provides insights and analytics to optimize fuel usage.
+          And it connects all fuel stations in the area and then users can get their fuel detail during the time periods.This platform is built using the React,SpringBoot,SQL ensuring a responsive and user-friendly experience.
+          And For fuelStations to scan the QR code of te customers.Mobile application has been developed using the Flutter framework.
+          The project includes features such as user authentication,robust search functionality, and a secure payment gateway. 
         </p>
       </div>
       <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
-        <h3 class="text-xl font-bold mb-2">Project 3</h3>
-        <p class="text-gray-600">
-          An IoT-based home automation system that allows users to control and monitor their home appliances remotely. 
-          The system includes features like energy usage tracking, voice commands, and automated schedules. 
-          Built with Raspberry Pi, Python, and MQTT, it ensures reliability and security for smart home enthusiasts.
+        <img src="./Assets/Screenshot (296).png" alt="Project 3" class="w-full h-40 object-cover rounded-md mb-4">
+        <h3 class="text-lg md:text-xl font-bold mb-2">FindYourMechanic.LK</h3>
+        <p class="text-gray-600 text-sm md:text-base">
+          This project is a web based platform that connects users with mechanics in their area. It allows users to find and book services for their vehicles, making it easier for them to maintain their cars.
+          The platform is built using the pure web technologies,such as HTML, JS, PHP, MYSQL  ensuring a responsive and user-friendly experience.
+          The project includes features such as user authentication,robust search functionality, and a secure payment gateway. And also It includes the dash board for the mechanics, Users and Admins.And Location tracking functionality also there.
         </p>
       </div>
     </div>
+  </section>
+
+  <section id="resume" class="p-4 md:p-12 bg-white">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-8">Resume</h2>
+    <p class="max-w-4xl mx-auto text-center text-gray-700 text-lg md:text-xl mb-8">
+      You can download my resume <a href="./Assets/resume.pdf" class="text-blue-700 underline" target="_blank">here</a>.
+    </p>
   </section>
 
   <section id="contact" class="p-4 md:p-12 bg-white">
@@ -134,9 +145,12 @@
   </section>
 
   <footer class="text-center py-4 bg-gray-200 mt-8">
-    <p>&copy; 2025 Your Name</p>
+    <p>&copy; 2025 Isuru Kaveesha</p>
   </footer>
 
   <script src="index.js"></script>
+  
+   
+ 
 </body>
 </html>
